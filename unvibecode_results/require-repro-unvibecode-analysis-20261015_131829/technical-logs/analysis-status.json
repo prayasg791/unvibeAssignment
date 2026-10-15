@@ -1,0 +1,95 @@
+{
+  "schema_version": "shipreadyv2.customer_analysis_status.v10",
+  "runner_version": "shipreadyv2.customer_mvp.v10",
+  "updated_at": "2026-10-15T07:49:14.468674+00:00",
+  "analysis_directory": "C:\\Users\\Praya\\OneDrive\\Documents\\webd\\UnvibeAssignment\\unvibecode_results\\require-repro-unvibecode-analysis-20261015_131829",
+  "repository": "C:\\Users\\Praya\\OneDrive\\Documents\\webd\\UnvibeAssignment\\require-repro",
+  "engine_root": "C:\\Users\\Praya\\AppData\\Local\\Temp\\unvibecode-engine-wsqja_3q\\engine",
+  "repository_estimate": {
+    "method": "supported_source_bytes_divided_by_3.2",
+    "source_files": 4,
+    "source_bytes": 328,
+    "approximate_tokens": 103,
+    "unreadable_files": []
+  },
+  "large_repository_policy": {
+    "limit_tokens": 2000000,
+    "is_large_repository": false,
+    "decision": "CONNECTED_CODE_MAP_AND_BUSINESS_REVIEW"
+  },
+  "overall_status": "COMPLETE",
+  "lanes": {
+    "FAST_LANE": {
+      "status": "COMPLETED",
+      "message": "Codebase map and connected code downloads are ready",
+      "customer_reason": null,
+      "started_at": "2026-10-15T07:48:35.096986+00:00",
+      "completed_at": "2026-10-15T07:48:35.096986+00:00",
+      "duration_seconds": 4.906,
+      "run_folder": "C:\\Users\\Praya\\AppData\\Local\\Temp\\uvc-35jf4je6\\c\\run",
+      "artifacts": {
+        "resolved_graph": "C:\\Users\\Praya\\AppData\\Local\\Temp\\uvc-35jf4je6\\c\\run\\shipreadyv2_resolved_graph.json",
+        "repository_profile": "C:\\Users\\Praya\\AppData\\Local\\Temp\\uvc-35jf4je6\\c\\run\\fast_lane_repository_profile.json",
+        "interactive_graph": "C:\\Users\\Praya\\AppData\\Local\\Temp\\uvc-35jf4je6\\c\\run\\fast_lane_symbol_resolution_graph.html",
+        "browser_context_store": "C:\\Users\\Praya\\AppData\\Local\\Temp\\uvc-35jf4je6\\c\\run\\fast_lane_context_store.js",
+        "api_context_store": "C:\\Users\\Praya\\AppData\\Local\\Temp\\uvc-35jf4je6\\c\\run\\fast_lane_context_store.json",
+        "complete_repository_context": "C:\\Users\\Praya\\AppData\\Local\\Temp\\uvc-35jf4je6\\c\\run\\shipready_complete_repository_context.zip",
+        "timing": "C:\\Users\\Praya\\AppData\\Local\\Temp\\uvc-35jf4je6\\c\\run\\fast_lane_timing.json"
+      },
+      "components": {
+        "connected_code_map": "COMPLETED",
+        "repository_context": "COMPLETED"
+      },
+      "error": null
+    },
+    "FULL_ANALYSIS": {
+      "status": "COMPLETED",
+      "message": "Business review completed with no evidence-supported findings",
+      "customer_reason": null,
+      "started_at": "2026-10-15T07:49:12.926042+00:00",
+      "completed_at": "2026-10-15T07:49:12.926042+00:00",
+      "duration_seconds": 42.735,
+      "active_stage": null,
+      "completed_stages": [
+        "STEP_01",
+        "STEP_02",
+        "STEP_03",
+        "STEP_04",
+        "STEP_05",
+        "NO_FINDINGS_REPORT"
+      ],
+      "run_folder": "C:\\Users\\Praya\\AppData\\Local\\Temp\\uvc-35jf4je6\\b\\run",
+      "artifacts": {
+        "report_folder": "C:\\Users\\Praya\\AppData\\Local\\Temp\\uvc-35jf4je6\\b\\run",
+        "business_workflow_context": "C:\\Users\\Praya\\AppData\\Local\\Temp\\uvc-35jf4je6\\b\\run\\business_workflow_context.html",
+        "business_flaw_report": "C:\\Users\\Praya\\AppData\\Local\\Temp\\uvc-35jf4je6\\b\\run\\shipreadyv2_customer_business_flaw_report_no_findings.html"
+      },
+      "components": {
+        "business_workflows": "COMPLETED",
+        "risk_findings": "COMPLETED"
+      },
+      "review_outcome": "NO_REPORTABLE_FINDINGS",
+      "selection_summary": {
+        "selected_count": 0,
+        "candidate_count": 2,
+        "rejected_count": 0,
+        "investigation_gap_count": 2,
+        "repository_name": "require-repro",
+        "coverage": "COMPLETE",
+        "expected_requests": 1,
+        "completed_requests": 1,
+        "missing_requests": 0
+      },
+      "business_risk_summary": null,
+      "error": null
+    }
+  },
+  "customer_results": {
+    "complete_repository_context": "C:\\Users\\Praya\\OneDrive\\Documents\\webd\\UnvibeAssignment\\unvibecode_results\\require-repro-unvibecode-analysis-20261015_131829\\repository-context-for-llm.zip",
+    "connected_code_map": "C:\\Users\\Praya\\OneDrive\\Documents\\webd\\UnvibeAssignment\\unvibecode_results\\require-repro-unvibecode-analysis-20261015_131829\\report-support\\connected-code.html",
+    "interim_results_page": "C:\\Users\\Praya\\OneDrive\\Documents\\webd\\UnvibeAssignment\\unvibecode_results\\require-repro-unvibecode-analysis-20261015_131829\\require-repro-unvibecode-interim.html",
+    "business_workflow_map": "C:\\Users\\Praya\\OneDrive\\Documents\\webd\\UnvibeAssignment\\unvibecode_results\\require-repro-unvibecode-analysis-20261015_131829\\report-support\\business-workflows.html",
+    "business_risk_findings": "C:\\Users\\Praya\\OneDrive\\Documents\\webd\\UnvibeAssignment\\unvibecode_results\\require-repro-unvibecode-analysis-20261015_131829\\report-support\\risk-findings.html",
+    "results_landing_page": "C:\\Users\\Praya\\OneDrive\\Documents\\webd\\UnvibeAssignment\\unvibecode_results\\require-repro-unvibecode-analysis-20261015_131829\\require-repro-unvibecode-full.html"
+  }
+}

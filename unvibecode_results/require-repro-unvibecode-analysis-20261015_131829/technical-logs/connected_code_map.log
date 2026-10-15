@@ -1,0 +1,23 @@
+Scanning workspace: C:\Users\Praya\OneDrive\Documents\webd\UnvibeAssignment\require-repro
+Parsing source files: 4
+[STAGE 1 COMPLETE] 4 files, 2 internal file edges, 1 unresolved/external imports
+
+[SHIPREADYV2 LINKER RESOLUTION COMPLETE]
+Output: C:\Users\Praya\AppData\Local\Temp\uvc-35jf4je6\c\run\shipreadyv2_resolved_graph.json
+Files indexed: 4
+Imports: 2 resolved, 0 partial, 1 unresolved, 0 hard-path skipped, 0 uncertain
+Python enrichment: 0 files, 0 safe constants, 0 dynamic imports marked
+Symbols: 0/0 resolved; 0 ambiguous names in index
+Symbol edges added: 2
+
+[SHIPREADYV2 FAST LANE COMPLETE]
+Target folder: C:\Users\Praya\OneDrive\Documents\webd\UnvibeAssignment\require-repro
+Run folder:    C:\Users\Praya\AppData\Local\Temp\uvc-35jf4je6\c\run
+Profile JSON:  C:\Users\Praya\AppData\Local\Temp\uvc-35jf4je6\c\run\fast_lane_repository_profile.json
+Resolved JSON: C:\Users\Praya\AppData\Local\Temp\uvc-35jf4je6\c\run\shipreadyv2_resolved_graph.json
+Symbol graph:  C:\Users\Praya\AppData\Local\Temp\uvc-35jf4je6\c\run\fast_lane_symbol_resolution_graph.html
+Click downloads: 4 files, 4 code sections, prepared in 0.078s
+Context JSON:  C:\Users\Praya\AppData\Local\Temp\uvc-35jf4je6\c\run\fast_lane_context_store.json
+Complete ZIP:  C:\Users\Praya\AppData\Local\Temp\uvc-35jf4je6\c\run\shipready_complete_repository_context.zip
+Context timing: {'code_sections': 0.031, 'connections': 0.0, 'download_selections': 0.016, 'browser_store': 0.0, 'zip_bundle': 0.015}
+Timing:        {'graph_build_seconds': 0.141, 'linker_seconds': 0.015, 'context_download_preparation_seconds': 0.078, 'html_render_seconds': 4.188, 'fast_lane_total_seconds': 4.438}

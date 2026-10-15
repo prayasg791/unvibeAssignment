@@ -1,0 +1,17 @@
+{
+  "name": "shopdesk-js",
+  "version": "1.0.0",
+  "private": true,
+  "description": "JavaScript port of the ShopDesk test service",
+  "main": "app/main.js",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "start": "node app/main.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
+  }
+}

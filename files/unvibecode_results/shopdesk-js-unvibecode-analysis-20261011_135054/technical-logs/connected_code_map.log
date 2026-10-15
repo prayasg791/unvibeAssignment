@@ -1,0 +1,23 @@
+Scanning workspace: C:\Users\Praya\OneDrive\Documents\webd\UnvibeAssignment\files\shopdesk-js
+Parsing source files: 17
+[STAGE 1 COMPLETE] 17 files, 10 internal file edges, 27 unresolved/external imports
+
+[SHIPREADYV2 LINKER RESOLUTION COMPLETE]
+Output: C:\Users\Praya\AppData\Local\Temp\uvc-5ud1iq_s\c\run\shipreadyv2_resolved_graph.json
+Files indexed: 17
+Imports: 10 resolved, 0 partial, 27 unresolved, 0 hard-path skipped, 0 uncertain
+Python enrichment: 0 files, 0 safe constants, 0 dynamic imports marked
+Symbols: 0/0 resolved; 2 ambiguous names in index
+Symbol edges added: 10
+
+[SHIPREADYV2 FAST LANE COMPLETE]
+Target folder: C:\Users\Praya\OneDrive\Documents\webd\UnvibeAssignment\files\shopdesk-js
+Run folder:    C:\Users\Praya\AppData\Local\Temp\uvc-5ud1iq_s\c\run
+Profile JSON:  C:\Users\Praya\AppData\Local\Temp\uvc-5ud1iq_s\c\run\fast_lane_repository_profile.json
+Resolved JSON: C:\Users\Praya\AppData\Local\Temp\uvc-5ud1iq_s\c\run\shipreadyv2_resolved_graph.json
+Symbol graph:  C:\Users\Praya\AppData\Local\Temp\uvc-5ud1iq_s\c\run\fast_lane_symbol_resolution_graph.html
+Click downloads: 17 files, 17 code sections, prepared in 0.094s
+Context JSON:  C:\Users\Praya\AppData\Local\Temp\uvc-5ud1iq_s\c\run\fast_lane_context_store.json
+Complete ZIP:  C:\Users\Praya\AppData\Local\Temp\uvc-5ud1iq_s\c\run\shipready_complete_repository_context.zip
+Context timing: {'code_sections': 0.031, 'connections': 0.016, 'download_selections': 0.031, 'browser_store': 0.0, 'zip_bundle': 0.016}
+Timing:        {'graph_build_seconds': 0.109, 'linker_seconds': 0.016, 'context_download_preparation_seconds': 0.094, 'html_render_seconds': 2.343, 'fast_lane_total_seconds': 2.562}

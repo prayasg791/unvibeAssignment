@@ -1,0 +1,152 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>UnvibeCode Business Risk Findings</title>
+<style>body{margin:0;background:#f8fafc;color:#0f172a;font:16px/1.55 Inter,Segoe UI,Arial,sans-serif}main{max-width:1180px;margin:auto;padding:38px 24px 80px}h1{font-size:36px;margin:0 0 8px}h2{font-size:25px}h3{font-size:16px;margin-bottom:6px}p,li,td,dd{overflow-wrap:anywhere}.summary,.flaw,.structural-review{background:white;border:1px solid #e2e8f0;border-radius:16px;padding:24px;margin:20px 0;box-shadow:0 8px 30px rgba(15,23,42,.05)}.critical{border-left:7px solid #991b1b}.high{border-left:7px solid #c2410c}.medium{border-left:7px solid #a16207}.badge,.structural-badge{display:inline-block;background:#0f172a;color:white;border-radius:999px;padding:5px 10px;font-size:12px;font-weight:700}.structural-badge{background:#4338ca}.bottom{font-size:19px;font-weight:600}.metrics{display:flex;gap:14px;flex-wrap:wrap}.metric{background:#e2e8f0;border-radius:12px;padding:12px 16px;min-width:120px}.metric strong{display:block;font-size:25px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.grid section{background:#f1f5f9;padding:14px;border-radius:10px}dl{display:grid;grid-template-columns:190px 1fr;gap:8px 16px}dt{font-weight:700}dd{margin:0}.graph-scroll{width:100%;overflow-x:auto;padding-bottom:8px}.path-graph{display:block;width:1500px;max-width:none;height:auto;background:white;border:1px solid #e2e8f0;border-radius:16px}table{width:100%;border-collapse:collapse;font-size:13px}th,td{text-align:left;vertical-align:top;border-bottom:1px solid #e2e8f0;padding:8px}summary{cursor:pointer;font-weight:700}.hotspot-card{margin-top:16px;padding:18px;background:#f8fafc;border:1px solid #dbe3f5;border-left:5px solid #4f46e5;border-radius:12px}.hotspot-card>h3{font-size:19px;margin:9px 0}.hotspot-code{margin-top:12px;padding:12px;background:#0f172a;border-radius:10px;overflow:hidden}.code-location{margin-bottom:8px;color:#c4b5fd;font-size:12px;font-weight:700}pre{margin:0;overflow:auto;color:#e2e8f0;font:12px/1.5 Consolas,monospace;white-space:pre}.hotspot-details{margin-top:14px}@media(max-width:760px){main{padding:24px 12px 50px}h1{font-size:29px}.grid{grid-template-columns:1fr}dl{grid-template-columns:1fr}.summary,.flaw,.structural-review{padding:17px}.path-graph{width:1200px}pre{font-size:11px}}</style><style id="unvibecode-customer-report-style">
+main{
+  padding-top:22px !important;
+}
+main > h1{
+  margin-bottom:4px !important;
+  font-size:30px !important;
+}
+main > p{
+  margin-top:0 !important;
+}
+</style>
+<style id="unvibecode-shared-theme">
+:root{--paper:#f7f6f2;--ink:#171714;--muted:#575750;--line:#35352e;--soft:#e9e8e1}
+html{scroll-behavior:smooth}body{background:var(--paper)!important;color:var(--ink)!important;font-family:Arial,Helvetica,sans-serif!important}
+a{color:inherit}.uvc-brand-bar{padding:20px 32px;border-bottom:1px solid var(--line);background:var(--paper)}.uvc-brand{font-size:24px;font-weight:800;letter-spacing:-1px;text-decoration:none;color:var(--ink)}.uvc-brand span{font-weight:400}
+h1,h2,h3,p,li,dt,dd,.eyebrow,.repository,.code-location{color:var(--ink)!important}.eyebrow,.hero-meta,.uvc-meta{font-family:Consolas,monospace!important;color:var(--muted)!important}
+.workspace,.view-toolbar,.view-tabs,.guide-item,.quick-guide,.connected-guide,.connected-cue,.cue-node,.context-sizes span,.token-help,.context-panel,.empty-state,.summary,.flaw,.structural-review,.hotspot-card,.metric,.grid section,.review-status,.scope-note{background:var(--paper)!important;color:var(--ink)!important;border-color:var(--line)!important;border-radius:0!important;box-shadow:none!important}
+.view-tab{border-radius:0!important;color:var(--ink)!important;background:var(--paper)!important;border-color:var(--line)!important}.view-tab.active,.download-link,.context-download,.context-panel a,.uvc-next-button{background:var(--ink)!important;color:var(--paper)!important;border-radius:0!important;border-color:var(--line)!important}
+.connected-cue p,.context-sizes span,.token-help p,.view-toolbar p{color:var(--muted)!important}.cue-icon,.context-sizes span.recommended{background:var(--soft)!important;border-color:var(--line)!important;color:var(--ink)!important}.cue-icon svg{stroke:var(--ink)!important}
+pre,.hotspot-code{background:var(--soft)!important;color:var(--ink)!important;border-radius:0!important}pre code{color:inherit!important}.path-graph{border-radius:0!important}.uvc-meta{font-size:12px;line-height:1.6;margin-top:8px}.uvc-report-heading{padding:28px 32px;border-bottom:1px solid var(--line)}.uvc-report-heading h1{font-size:32px;margin:0 0 8px}.uvc-report-heading p{margin:0}
+.uvc-workflow-layout{display:grid;grid-template-columns:270px minmax(0,1fr);max-width:1600px;margin:auto;border-left:1px solid var(--line);border-right:1px solid var(--line)}.uvc-area-nav{position:sticky;top:0;max-height:100vh;overflow:auto;align-self:start;padding:24px 20px;border-right:1px solid var(--line)}.uvc-area-nav a{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid #d4d3ca;text-decoration:none;font-size:14px}.uvc-area-nav a:hover{background:var(--soft)}.uvc-area-nav span{font:12px Consolas,monospace;color:var(--muted)}
+.uvc-workflow-layout .wrap{max-width:none;margin:0!important;padding:0;min-width:0}.workflow-group{padding:30px!important;margin:0!important;border:0!important;border-bottom:1px solid var(--line)!important;background:var(--paper)!important;border-radius:0!important}.workflow-card{padding:26px 0!important;margin:0!important;border:0!important;border-top:1px solid #bbbbae!important;background:var(--paper)!important;box-shadow:none!important;border-radius:0!important}.workflow-number{font:16px Consolas,monospace!important;color:var(--muted)!important;flex-basis:auto!important}.workflow-title{font-size:23px!important}.group-header h2{font-size:30px}.group-count{border:1px solid var(--line)!important;border-radius:0!important;background:var(--paper)!important;color:var(--ink)!important}.workflow-summary{background:transparent!important;border-left:2px solid var(--ink)!important;border-radius:0!important}.context-panel{border-radius:0!important}.supporting-code{border:1px solid #b2b2a6;border-radius:0!important;padding:14px 16px}.evidence-item pre{white-space:pre-wrap;overflow-wrap:anywhere;max-height:460px;overflow:auto}.uvc-embedded .uvc-brand-bar,.uvc-embedded .uvc-report-heading{display:none}
+#shipready-context-download,#shipready-file-details,#shipready-context-size{background:var(--paper)!important;color:var(--ink)!important;border:1px solid var(--line)!important;border-radius:0!important;box-shadow:none!important}#shipready-context-download,#shipready-file-details{border:0!important;box-shadow:none!important}#shipready-download-button{background:var(--ink)!important;color:var(--paper)!important;border-radius:0!important}#mynetwork{background:var(--paper)!important}#unvibecode-review-continue{background:var(--paper)!important;border-color:var(--line)!important;border-radius:0!important;box-shadow:none!important}
+@media(max-width:850px){.uvc-workflow-layout{grid-template-columns:1fr}.uvc-area-nav{position:static;max-height:none;display:grid;grid-template-columns:1fr 1fr;gap:0 20px;border-right:0;border-bottom:1px solid var(--line)}.uvc-area-nav>p{grid-column:1/-1}.uvc-brand-bar,.uvc-report-heading{padding:20px}.workflow-group{padding:24px!important}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+/* Centered loading view, above iframe while its embedded report initializes. */
+#report-stage{position:relative}
+#uvc-report-loader{position:absolute;inset:0;z-index:50;display:grid;place-items:center;background:var(--paper);text-align:center;color:var(--ink)}
+#uvc-report-loader[hidden]{display:none!important}#uvc-report-loader strong{display:block;font-size:16px}#uvc-report-loader p{font-size:12px;color:var(--muted)!important}
+.uvc-loading-spinner{display:block;width:28px;height:28px;border:2px solid var(--soft);border-top-color:var(--ink);border-radius:50%;margin:0 auto 14px;animation:uvc-spin .9s linear infinite}
+@keyframes uvc-spin{to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){.uvc-loading-spinner{animation:none}}
+/* Compact output workspace; workflow cards and their sidebar are unchanged. */
+.uvc-brand-bar{padding:10px 20px;display:flex;align-items:center;justify-content:space-between}.uvc-github{font-size:12px;text-decoration:none}.uvc-run-info{right:110px!important}.uvc-brand{font-size:21px}
+body:has(.workspace){height:100vh;display:flex;flex-direction:column;overflow:hidden}
+body:has(.workspace)>main{width:100%;max-width:1600px;flex:1;min-height:0;padding:0 12px 12px;display:flex;flex-direction:column}
+.uvc-run-info{position:absolute;top:12px;left:165px;right:20px;display:flex;align-items:center;gap:14px;font-size:13px;min-width:0}.uvc-run-info>span:first-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.uvc-status{font:10px Consolas,monospace;border:1px solid var(--line);padding:3px 6px}
+.workspace{position:relative;display:flex;flex-direction:column;flex:1;min-height:0;overflow:hidden;margin:0!important}.view-tabs{flex-shrink:0;padding-right:130px;flex-wrap:wrap}.view-toolbar{flex-shrink:0;min-height:0!important;padding:9px 14px!important}.view-toolbar h2{font-size:18px}.view-toolbar p{margin:3px 0!important}.report-stage{flex:1;min-height:0!important}#report-stage.connected-active:not([hidden]){display:block!important}#report-stage[hidden],#context-panel[hidden]{display:none!important}#report-frame{height:100%!important;min-height:0!important}.workspace>#context-panel{min-height:0!important;overflow:auto;flex:1}.review-status,.scope-note{flex-shrink:0}
+.uvc-help{position:absolute;right:10px;top:10px;z-index:20;font-size:12px}.uvc-help>summary{list-style:none;cursor:pointer;padding:5px;border:1px solid var(--line);background:var(--paper)}.uvc-help-panel{position:absolute;right:0;top:34px;width:min(580px,calc(100vw - 50px));max-height:65vh;overflow:auto;background:var(--paper);border:1px solid var(--line);padding:12px}.uvc-help-panel .guide-grid{display:grid;grid-template-columns:1fr!important}.uvc-help-panel .guide-item{border:0;border-bottom:1px solid #bbbbae;padding:10px}.uvc-help-panel .quick-guide{margin:0!important}.uvc-help summary:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+@media(max-width:600px){.uvc-run-info{left:145px;font-size:12px;gap:6px}.uvc-brand{font-size:19px}.view-tabs{padding-right:45px}.uvc-help>summary span{display:none}.view-tab{padding:8px!important;font-size:12px!important}}
+
+</style></head>
+<body><div class="uvc-brand-bar"><a class="uvc-brand" href="https://financeflash.github.io/unvibecode/" target="_blank" rel="noopener">Unvibe<span>Code</span></a><a class="uvc-github" href="https://github.com/FinanceFlash/unvibecode" target="_blank" rel="noopener noreferrer">⭐ Star UnvibeCode</a></div><main><h1>shopdesk-js business flaw report</h1><p>Business-heavy findings reconstructed from connected code paths.</p>
+<section class="summary"><h2>Summary</h2><p class="bottom">Shopdesk-js exposes the full orders export to anonymous callers. The export route returns every order record, blocks authenticated non-admin users, but still falls through for requests with no authenticated user.</p><div class="metrics"><div class="metric"><strong>1</strong>flaws</div><div class="metric"><strong>1</strong>strong evidence</div><div class="metric"><strong>0</strong>supported evidence</div></div></section>
+<h2>Business paths</h2><div class="graph-scroll"><img class="path-graph" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNTAwIiBoZWlnaHQ9IjI5OCIgdmlld0JveD0iMCAwIDE1MDAgMjk4Ij4KPGRlZnM+PG1hcmtlciBpZD0iYXJyb3ciIG1hcmtlcldpZHRoPSIxMCIgbWFya2VySGVpZ2h0PSIxMCIgcmVmWD0iOSIgcmVmWT0iMyIgb3JpZW50PSJhdXRvIj48cGF0aCBkPSJNMCwwIEwwLDYgTDksMyB6IiBmaWxsPSIjNjQ3NDhiIi8+PC9tYXJrZXI+CjxzdHlsZT4udGl0bGV7Zm9udDo3MDAgMjRweCBBcmlhbDtmaWxsOiMwZjE3MmF9LmxhbmV7Zm9udDo3MDAgMTZweCBBcmlhbDtmaWxsOiMwZjE3MmF9Lm5vZGV7Zm9udDo2MDAgMTRweCBBcmlhbDtmaWxsOiMwZjE3MmF9Lm1ldGF7Zm9udDoxMi41cHggQXJpYWw7ZmlsbDojNDc1NTY5fS5lZGdle3N0cm9rZTojNjQ3NDhiO3N0cm9rZS13aWR0aDoyO21hcmtlci1lbmQ6dXJsKCNhcnJvdyl9LmltcGFjdHtzdHJva2U6I2RjMjYyNjtzdHJva2Utd2lkdGg6MzttYXJrZXItZW5kOnVybCgjYXJyb3cpfTwvc3R5bGU+PC9kZWZzPgo8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjhmYWZjIi8+Cjx0ZXh0IHg9IjQwIiB5PSI0MCIgY2xhc3M9InRpdGxlIj5zaG9wZGVzay1qcyDigJQgYnVzaW5lc3MgZmxhdyBwYXRoczwvdGV4dD4KPHRleHQgeD0iNDAiIHk9IjkwIiBjbGFzcz0ibGFuZSI+Q1JJVElDQUwgwrcgU1RST05HIEVWSURFTkNFIOKAlCBBbm9ueW1vdXMgY2FsbGVycyByZWNlaXZlIHRoZSBmdWxsIG9yZGVycyBleHBvcnQ8L3RleHQ+CjxyZWN0IHg9IjQwIiB5PSIxMTgiIHJ4PSIxMCIgd2lkdGg9IjE4MiIgaGVpZ2h0PSIxMzYiIGZpbGw9IiNlMGYyZmUiIHN0cm9rZT0iIzk0YTNiOCIgc3Ryb2tlLXdpZHRoPSIyIi8+Cjx0ZXh0IHg9IjUwIiB5PSIxNDQiIGNsYXNzPSJub2RlIj5Bbm9ueW1vdXMgY2FsbGVyPC90ZXh0Pgo8dGV4dCB4PSI1MCIgeT0iMjQyIiBjbGFzcz0ibWV0YSI+c2VydmljZSBiYWNrZW5kPC90ZXh0Pgo8cmVjdCB4PSIyNDYiIHk9IjExOCIgcng9IjEwIiB3aWR0aD0iMTgyIiBoZWlnaHQ9IjEzNiIgZmlsbD0iI2UwZjJmZSIgc3Ryb2tlPSIjOTRhM2I4IiBzdHJva2Utd2lkdGg9IjIiLz4KPHRleHQgeD0iMjU2IiB5PSIxNDQiIGNsYXNzPSJub2RlIj5SZXF1ZXN0cyBvcmRlciBleHBvcnQ8L3RleHQ+Cjx0ZXh0IHg9IjI1NiIgeT0iMjQyIiBjbGFzcz0ibWV0YSI+c2VydmljZSBiYWNrZW5kPC90ZXh0Pgo8cmVjdCB4PSI0NTIiIHk9IjExOCIgcng9IjEwIiB3aWR0aD0iMTgyIiBoZWlnaHQ9IjEzNiIgZmlsbD0iI2YxZjVmOSIgc3Ryb2tlPSIjOTRhM2I4IiBzdHJva2Utd2lkdGg9IjIiLz4KPHRleHQgeD0iNDYyIiB5PSIxNDQiIGNsYXNzPSJub2RlIj5SZXF1ZXN0IHByb2NlZWRzPC90ZXh0Pgo8dGV4dCB4PSI0NjIiIHk9IjE2MiIgY2xhc3M9Im5vZGUiPndpdGhvdXQgYXV0aGVudGljYXRlZDwvdGV4dD4KPHRleHQgeD0iNDYyIiB5PSIxODAiIGNsYXNzPSJub2RlIj51c2VyPC90ZXh0Pgo8dGV4dCB4PSI0NjIiIHk9IjI0MiIgY2xhc3M9Im1ldGEiPmF1dGhlbnRpY2F0aW9uIGZsb3c8L3RleHQ+CjxyZWN0IHg9IjY1OCIgeT0iMTE4IiByeD0iMTAiIHdpZHRoPSIxODIiIGhlaWdodD0iMTM2IiBmaWxsPSIjZjFmNWY5IiBzdHJva2U9IiM5NGEzYjgiIHN0cm9rZS13aWR0aD0iMiIvPgo8dGV4dCB4PSI2NjgiIHk9IjE0NCIgY2xhc3M9Im5vZGUiPlJvbGUgY2hlY2sgYmxvY2tzIG9ubHk8L3RleHQ+Cjx0ZXh0IHg9IjY2OCIgeT0iMTYyIiBjbGFzcz0ibm9kZSI+YXV0aGVudGljYXRlZCBub24tPC90ZXh0Pgo8dGV4dCB4PSI2NjgiIHk9IjE4MCIgY2xhc3M9Im5vZGUiPmFkbWluIHVzZXJzPC90ZXh0Pgo8dGV4dCB4PSI2NjgiIHk9IjIyNyIgY2xhc3M9Im1ldGEiPm9yZGVyIGV4cG9ydCBhY2Nlc3M8L3RleHQ+Cjx0ZXh0IHg9IjY2OCIgeT0iMjQyIiBjbGFzcz0ibWV0YSI+Y29udHJvbDwvdGV4dD4KPHJlY3QgeD0iODY0IiB5PSIxMTgiIHJ4PSIxMCIgd2lkdGg9IjE4MiIgaGVpZ2h0PSIxMzYiIGZpbGw9IiNmMWY1ZjkiIHN0cm9rZT0iIzk0YTNiOCIgc3Ryb2tlLXdpZHRoPSIyIi8+Cjx0ZXh0IHg9Ijg3NCIgeT0iMTQ0IiBjbGFzcz0ibm9kZSI+Q29tcGxldGUgb3JkZXJzIGV4cG9ydDwvdGV4dD4KPHRleHQgeD0iODc0IiB5PSIxNjIiIGNsYXNzPSJub2RlIj5pcyByZXR1cm5lZDwvdGV4dD4KPHRleHQgeD0iODc0IiB5PSIyNDIiIGNsYXNzPSJtZXRhIj5vcmRlciBleHBvcnQgaGFuZGxlcjwvdGV4dD4KPHJlY3QgeD0iMTA3MCIgeT0iMTE4IiByeD0iMTAiIHdpZHRoPSIxODIiIGhlaWdodD0iMTM2IiBmaWxsPSIjZjFmNWY5IiBzdHJva2U9IiM5NGEzYjgiIHN0cm9rZS13aWR0aD0iMiIvPgo8dGV4dCB4PSIxMDgwIiB5PSIxNDQiIGNsYXNzPSJub2RlIj5BbGwgb3JkZXIgcmVjb3JkczwvdGV4dD4KPHRleHQgeD0iMTA4MCIgeT0iMjQyIiBjbGFzcz0ibWV0YSI+b3JkZXJzIGRhdGEgc3RvcmU8L3RleHQ+CjxyZWN0IHg9IjEyNzYiIHk9IjExOCIgcng9IjEwIiB3aWR0aD0iMTgyIiBoZWlnaHQ9IjEzNiIgZmlsbD0iI2ZlZTJlMiIgc3Ryb2tlPSIjYjkxYzFjIiBzdHJva2Utd2lkdGg9IjIiLz4KPHRleHQgeD0iMTI4NiIgeT0iMTQ0IiBjbGFzcz0ibm9kZSI+QW5vbnltb3VzIGFjY2VzczwvdGV4dD4KPHRleHQgeD0iMTI4NiIgeT0iMTYyIiBjbGFzcz0ibm9kZSI+YnlwYXNzZXMgdGhlIGFkbWluPC90ZXh0Pgo8dGV4dCB4PSIxMjg2IiB5PSIxODAiIGNsYXNzPSJub2RlIj5leHBvcnQgYm91bmRhcnk8L3RleHQ+Cjx0ZXh0IHg9IjEyODYiIHk9IjIyNyIgY2xhc3M9Im1ldGEiPm9yZGVyIGV4cG9ydDwvdGV4dD4KPHRleHQgeD0iMTI4NiIgeT0iMjQyIiBjbGFzcz0ibWV0YSI+Z292ZXJuYW5jZTwvdGV4dD4KPGxpbmUgeDE9IjIyMiIgeTE9IjE4Ni4wIiB4Mj0iMjQyIiB5Mj0iMTg2LjAiIGNsYXNzPSJlZGdlIi8+CjxsaW5lIHgxPSI0MjgiIHkxPSIxODYuMCIgeDI9IjQ0OCIgeTI9IjE4Ni4wIiBjbGFzcz0iZWRnZSIvPgo8bGluZSB4MT0iNjM0IiB5MT0iMTg2LjAiIHgyPSI2NTQiIHkyPSIxODYuMCIgY2xhc3M9ImVkZ2UiLz4KPGxpbmUgeDE9Ijg0MCIgeTE9IjE4Ni4wIiB4Mj0iODYwIiB5Mj0iMTg2LjAiIGNsYXNzPSJlZGdlIi8+CjxsaW5lIHgxPSIxMDQ2IiB5MT0iMTg2LjAiIHgyPSIxMDY2IiB5Mj0iMTg2LjAiIGNsYXNzPSJlZGdlIi8+CjxsaW5lIHgxPSIxMjUyIiB5MT0iMTg2LjAiIHgyPSIxMjcyIiB5Mj0iMTg2LjAiIGNsYXNzPSJpbXBhY3QiLz4KPC9zdmc+" alt="Business flaw paths"></div><h2>Business flaws</h2>
+<article class="flaw critical">
+<div class="badge">CRITICAL · STRONG EVIDENCE</div>
+<h2>1. Anonymous callers receive the full orders export</h2>
+<p class="bottom">When GET /api/orders/public-export is requested without an authenticated user, the handler returns every order record as JSON while authenticated non-admin users are rejected with 403.</p>
+<div class="grid">
+<section><h3>Trigger</h3><p>When an anonymous caller requests the public orders export endpoint, the request reaches the export handler without an authenticated user attached.</p></section>
+<section><h3>What the code does</h3><p>The handler denies authenticated non-admin users, but otherwise returns db.allOrders() as JSON, and allOrders reads every row from the orders table.</p></section>
+<section><h3>Business rule</h3><p>A complete orders export that is explicitly reserved against authenticated non-admin users is an admin-only function and must not be reachable anonymously.</p><small>Basis: REPOSITORY ESTABLISHED</small></section>
+<section><h3>Business downside</h3><p>Anonymous access bypasses the admin export boundary and exposes all orders without authentication.</p></section>
+</div>
+<h3>Impact</h3><dl>
+<dt>Immediate outcome</dt><dd>The complete orders dataset is disclosed to an anonymous caller in one response.</dd>
+<dt>Affected party or asset</dt><dd>all order records returned by the export endpoint</dd>
+<dt>Scale mechanism</dt><dd>The route serializes db.allOrders(), and allOrders selects all rows from the orders table rather than a caller-scoped subset.</dd>
+<dt>Detection difficulty</dt><dd>Authenticated customer testing returns 403, so the broader anonymous access path is easy to miss unless the endpoint is tested without a session.</dd>
+<dt>Reversibility</dt><dd>Once the export response is returned, the disclosed dataset is already outside the system.</dd>
+</dl>
+<h3>How the code reaches the outcome</h3><ul><li>The application applies authMiddleware before routing requests.</li><li>For public paths, authMiddleware does not require a session and does not attach request.user.</li><li>The export handler only returns 403 when request.user exists and the role is not admin.</li><li>If request.user is absent, the handler returns db.allOrders(), and allOrders selects every row from orders.</li></ul>
+<h3>What to change</h3><p>Restrict complete order exports to authorized admin access and prevent anonymous disclosure of order records.</p>
+<h3>Acceptance check</h3><p><strong>Given</strong> an existing order set and a request to GET /api/orders/public-export without a valid authenticated user<br><strong>When</strong> the request passes through auth middleware and the export handler executes<br><strong>Then</strong> the request must be denied instead of returning the full orders dataset</p>
+<details><summary>Exact code proof</summary><table><thead><tr><th>File</th><th>Symbol</th><th>Lines</th><th>Proof</th></tr></thead><tbody><tr><td>app/routes/admin.js</td><td>router.get(&#x27;/api/orders/public-export&#x27;)</td><td>6–11</td><td>Route allows admin or anonymous caller and returns all orders.</td></tr><tr><td>app/routes/admin.js</td><td>router.get(&#x27;/api/orders/public-export&#x27;)</td><td>7–10</td><td>Role-based 403 gate.</td></tr><tr><td>app/routes/admin.js</td><td>router.get(&#x27;/api/orders/public-export&#x27;)</td><td>6–11</td><td>Endpoint returns db.allOrders().</td></tr><tr><td>app/routes/admin.js</td><td>router.get(&#x27;/api/orders/public-export&#x27;)</td><td>7–10</td><td>Role check blocks non-admin authenticated callers.</td></tr><tr><td>app/routes/admin.js</td><td>router.get(&#x27;/api/orders/public-export&#x27;)</td><td>11–11</td><td>db.allOrders() is returned as JSON.</td></tr><tr><td>app/db.js</td><td>allOrders</td><td>58–59</td><td>allOrders reads all rows from the orders table.</td></tr><tr><td>app/middleware.js</td><td>authMiddleware</td><td>4–16</td><td>Authentication middleware populates request.user on non-public paths.</td></tr><tr><td>app/routes/admin.js</td><td>router.get(&#x27;/api/orders/public-export&#x27;)</td><td>7–11</td><td>Admin role is the allowed privilege case.</td></tr><tr><td>app/routes/admin.js</td><td>router.get(&#x27;/api/orders/public-export&#x27;)</td><td>6–11</td><td>Public export route with admin-only restriction for authenticated non-admin users.</td></tr><tr><td>app/middleware.js</td><td>authMiddleware</td><td>4–16</td><td>Middleware attaches user only when session is valid and path not public.</td></tr><tr><td>app/db.js</td><td>allOrders</td><td>58–60</td><td>allOrders returns all rows from orders table.</td></tr></tbody></table></details>
+</article>
+
+<section class="structural-review">
+  <h2>Additional code areas worth reviewing</h2>
+  <p>No additional code area met the strict structural review rules.</p>
+</section></main>
+<style id="unvibecode-review-continue-style">
+#unvibecode-review-continue{
+  width:min(1180px,calc(100% - 32px));
+  margin:26px auto 18px;
+  padding:16px 18px;
+  border:1px solid #dbe3ee;
+  border-radius:12px;
+  background:#f8fafc;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  color:#0f172a;
+  font-family:Segoe UI,Arial,sans-serif;
+}
+#unvibecode-review-continue .uvc-next-kicker{
+  margin:0 0 3px;
+  color:#64748b;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+}
+#unvibecode-review-continue .uvc-next-copy{
+  margin:0;
+  color:#475569;
+  font-size:13px;
+  line-height:1.4;
+}
+#unvibecode-review-continue .uvc-next-button{
+  appearance:none;
+  border:0;
+  border-radius:9px;
+  background:#4f46e5;
+  color:#fff;
+  padding:10px 14px;
+  font:700 13px/1.2 Segoe UI,Arial,sans-serif;
+  cursor:pointer;
+  white-space:nowrap;
+}
+@media(max-width:700px){
+  #unvibecode-review-continue{align-items:stretch;flex-direction:column}
+  #unvibecode-review-continue .uvc-next-button{width:100%}
+}
+</style>
+<section id="unvibecode-review-continue" aria-label="Continue your review">
+  <div>
+    <p class="uvc-next-kicker">Continue your review</p>
+    <p class="uvc-next-copy">Download the complete normalized repository ZIP for LLM or API analysis.</p>
+  </div>
+  <button class="uvc-next-button" type="button" data-target="llm-context">LLM Context →</button>
+</section>
+<script>
+(function(){
+  const section = document.getElementById('unvibecode-review-continue');
+  if (!section) return;
+  const button = section.querySelector('[data-target]');
+  if (!button) return;
+  if (new URLSearchParams(window.location.search).get('early') === '1') {
+    button.setAttribute('data-target', 'llm-context');
+    button.textContent = 'LLM Context →';
+    section.querySelector('.uvc-next-copy').textContent = 'Download repository context for LLM or API analysis.';
+  }
+  button.addEventListener('click', function(){
+    const target = button.getAttribute('data-target');
+    if (window.parent && window.parent !== window) {
+      window.parent.postMessage({
+        type: 'unvibecode-select-view',
+        target: target
+      }, '*');
+      return;
+    }
+    window.location.href = '00_unvibecode_results.html#' + encodeURIComponent(target);
+  });
+})();
+</script>
+
+<script>if(window.self!==window.top)document.documentElement.classList.add("uvc-embedded");</script></body></html>
